@@ -1,18 +1,18 @@
 # todo: implement Class structure
 # todo: header
 
-# 3rd Party--------
+# Standard ------------
+from io import StringIO
+from pathlib import Path
+
+# 3rd Party-
 import boto3
 import pandas as pd
 from botocore.exceptions import ClientError
 
-# Standard -------------
-from pathlib import Path
-from io import StringIO
-
-# Project ------------------------------------------------------------
-from config.aws_config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+# Project ----------------------------------------------------
 from config.config import AWS_REGION, BUCKET_NAME, S3_RAW_PATH
+from config.aws_config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
 # Define project root directory
 project_root = Path(__file__).resolve().parents[1]
